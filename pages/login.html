@@ -15,14 +15,29 @@
                 <input type="email" name="email" id="email" required placeholder="Email">
             </div>
 
-            <div>
+            <div class="password-container">
                 <label for="password"></label>
                 <input type="password" name="password" id="password" required placeholder="Password">
+                <img src="../assets/images/view.png" alt="Toggle Password Visibility" class="toggle-icon" id="toggle-icon" onclick="togglePasswordVisibility()">
             </div>
 
             <button id="btnLogin" type="submit">Sign In</button>
-            <p>Don't have account yet? <a href="">Sign Up</a></p>
+            <p>Don't have account yet? <a href="./signup.html">Sign Up</a></p>
         </form>
     </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = passwordInput.nextElementSibling;
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.src = '../assets/images/hide.png'; 
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.src = '../assets/images/view.png';
+            }
+        }
+    </script>
 </body>
 </html>

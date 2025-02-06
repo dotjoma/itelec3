@@ -20,35 +20,51 @@
                 <input type="password" name="password" id="password" required placeholder="Password">
             </div>
 
-            <div>
+            <div class="password-container">
                 <label for="confirm-pass"></label>
                 <input type="password" name="confirm-pass" id="confirm-pass" required placeholder="Confirm Password">
+                <img src="../assets/images/view.png" alt="Toggle Password Visibility" class="toggle-icon" id="toggle-icon" onclick="togglePasswordVisibility()">
             </div>
 
-            <button id="btnLogin" type="submit">Sign Up</button>
-            <p>Already have an account? <a href="">Sign In</a></p>
+            <button id="btnSignup" type="submit">Sign Up</button>
+
+            <p>Already have an account? <a href="./login.html">Sign In</a></p>
             
-            <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;"><p id="left-line"></p> Or <p id="right-line"></p></div>
+            <div class="separator">
+                <hr>
+                <span>Or</span>
+                <hr>
+            </div>
 
             <div class="fb-container">
-                <div style="display: flex;">
-                    <img src="../assets/images/facebook-logo.png" alt="Facebook Logo" width="32px" height="32px">
-                </div>
-                <div style="display: flex; justify-content: center; width: 100%;">
-                    <button id="btnFacebook" type="button">Login with Facebook</button>
-                </div>
+                <img class="fb-logo" src="../assets/images/facebook-logo.png" alt="Facebook Logo">
+                <button class="fb-button" type="button">Login with Facebook</button>
             </div>
 
             <div class="google-container">
-                <div style="display: flex;">
-                    <img src="../assets/images/google-logo.png" alt="Google Logo" width="28px" height="28px">
-                </div>
-                <div style="display: flex; justify-content: center; width: 100%;">
-                    <button id="btnGoogle" type="button">Login with Google</button>
-                </div>
+                <img class="google-logo" src="../assets/images/google-logo.png" alt="Goole Logo">
+                <button class="google-button" type="button">Login with Google</button>
             </div>
             
         </form>
     </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirm-pass');
+            const eyeIcon = passwordInput.nextElementSibling; 
+            const eyeIcon1 = confirmPasswordInput.nextElementSibling; 
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                confirmPasswordInput.type = 'text';
+                eyeIcon1.src = '../assets/images/hide.png'; 
+            } else {
+                passwordInput.type = 'password';
+                confirmPasswordInput.type = 'password';
+                eyeIcon1.src = '../assets/images/view.png';
+            }
+        }
+    </script>
 </body>
 </html>
