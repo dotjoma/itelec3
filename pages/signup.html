@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="signup-container">
+        <form action="">
+            <h1 class="title">SignUp</h1>
+            <div>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" required placeholder="Email">
+            </div>
+
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" required placeholder="Password">
+            </div>
+
+            <div>
+                <label for="confirm-pass"></label>
+                <input type="password" name="confirm-pass" id="confirm-pass" required placeholder="Confirm Password">
+            </div>
+
+            <button id="btnLogin" type="submit">Sign Up</button>
+            <p>Already have an account? <a href="">Sign In</a></p>
+            
+            <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;"><p id="left-line"></p> Or <p id="right-line"></p></div>
+
+            <div class="fb-container">
+                <div style="display: flex;">
+                    <img src="../assets/images/facebook-logo.png" alt="Facebook Logo" width="32px" height="32px">
+                </div>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <button id="btnFacebook" type="button">Login with Facebook</button>
+                </div>
+            </div>
+
+            <div class="google-container">
+                <div style="display: flex;">
+                    <img src="../assets/images/google-logo.png" alt="Google Logo" width="28px" height="28px">
+                </div>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <button id="btnGoogle" type="button">Login with Google</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
